@@ -468,11 +468,22 @@
                 // TODO: this is a temporary measure which should be replaced by a more
                 // sensible login mechanism
                 if ( err.check_name ) {
-                    this.onClickSubmit();
+                    this.doSubmit();
                 } else {
                     if ( err.errors && err.errors.password ) {
                         this.validationError('form_password', err.errors.password );
                     }
+                }
+            },
+
+            afterRender: function() {
+                console.log("SubmitConfirmView.afterRender");
+                if (CONFIG.SKIP_CONFIRM_REPORT) {
+                    var that = this;
+                    setTimeout(function() {
+                        console.log("running doSubmit");
+                        that.doSubmit();
+                    }, 10);
                 }
             }
         })
