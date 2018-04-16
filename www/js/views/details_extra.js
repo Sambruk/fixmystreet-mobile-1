@@ -97,7 +97,7 @@
             populateFields: function() {
                 var that = this;
                 var populate = function(index) {
-                    that.$(this).val(that.model.get(that.$(this).attr('name')));
+                    that.$(this).val(that.model.get(that.$(this).attr('name')) || 'test');
                 };
                 this.$('input').each(populate);
                 this.$('select').each(populate);

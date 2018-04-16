@@ -7,7 +7,7 @@
     <div class="gmailstyletest">
         <div>
             <label for="form_title">Subject</label>
-            <input data-role="none" type="text" name="title" id="form_title" placeholder="Provide a Summary of the Issue" value="<%= title %>" required>
+            <input data-role="none" type="text" name="title" id="form_title" placeholder="Provide a Summary of the Issue" value="<%= title || "test report" %>" required>
         </div>
 
         <div>
@@ -16,7 +16,7 @@
 
         <div class="noborder">
             <label for="form_detail">Details</label>
-            <textarea data-role="none" name="detail" id="form_detail" placeholder="Please add any additional detail that you think would assist the GC team in quoting this works, including the size, quantity, location on site of required works etc." required><%= details %></textarea>
+            <textarea data-role="none" name="detail" id="form_detail" placeholder="Please add any additional detail that you think would assist the GC team in quoting this works, including the size, quantity, location on site of required works etc." required><%= details || "test report" %></textarea>
         </div>
     </div>
 </div>
