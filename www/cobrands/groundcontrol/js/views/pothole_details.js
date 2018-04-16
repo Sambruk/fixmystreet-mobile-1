@@ -15,9 +15,6 @@
         },
 
         addPhotoToReport: function(file) {
-            console.log(arguments);
-            console.log("GC addPhotoToReport");
-
             this.blurBackground();
             this.currentFile = file;
             $(".pothole-size-selector .photo").css("background-image", "url("+file.toURL()+")");
@@ -26,7 +23,7 @@
         },
 
         potholeSizeSelected: function(e) {
-            console.log(this);
+            e.preventDefault();
 
             var size = e.target.dataset.potholeSize;
             var pothole_sizes = this.model.get("pothole_sizes") || {};
