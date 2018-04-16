@@ -28,6 +28,7 @@
                 var that = this;
                 $.ajax({
                     url: CONFIG.FMS_URL + '/groundcontrol/accept',
+                    type: 'POST',
                     dataType: 'json',
                     data: {
                         report_id: id,
