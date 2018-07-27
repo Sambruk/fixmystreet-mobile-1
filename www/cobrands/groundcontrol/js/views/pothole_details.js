@@ -26,17 +26,6 @@
             $(".pothole-size-selector .photo").css("background-image", "url("+url+")");
             $(".pothole-size-selector .photo").data("photo_url", url);
             $(".pothole-size-selector").removeClass('hidden');
-
-            // There's some weird bug on iOS 10 where grid items are much too
-            // tall, meaning only the first row of pothole size buttons is
-            // displayed. This works around the problem by removing and
-            // re-applying the grid to the list of buttons. Ugly, but works.
-            if (device.platform === "iOS" && /^10/.test(device.version)) {
-                $(".pothole-size-selector ul").css("display", "block");
-                setTimeout(function() {
-                    $(".pothole-size-selector ul").css("display", "grid");
-                }, 0);
-            }
         },
 
         potholeSizeSelected: function(e) {
