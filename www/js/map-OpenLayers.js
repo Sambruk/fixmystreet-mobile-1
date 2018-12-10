@@ -67,28 +67,28 @@ function fixmystreet_onload() {
     });
     var location_img = CONFIG.PINS.location.image;
     var location_bg_img = CONFIG.PINS.location.background;
-    if ( typeof device !== 'undefined' && (
+    /* if ( typeof device !== 'undefined' && (
         (device.platform == 'Android' && parseInt(device.version, 10) > 2) ||
         (device.platform !== 'Android') ) ) {
         location_img = CONFIG.PINS.location.image_svg;
         location_bg_img = CONFIG.PINS.location.background_svg;
-    }
+    } */
 
     pin_layer_style_map.addUniqueValueRules('default', 'size', {
         'normal': {
-            externalGraphic: "images/pin-${colour}.png",
+            externalGraphic: "images/pin-red.png", // "images/pin-${colour}.png"
             graphicWidth: 48,
             graphicHeight: 64,
             graphicXOffset: -24,
             graphicYOffset: -64,
-            backgroundGraphic: "images/pin-shadow.png",
+            backgroundGraphic: "images/pin-shadow.png", // "images/pin-shadow.png"
             backgroundWidth: 60,
             backgroundHeight: 30,
             backgroundXOffset: -7,
             backgroundYOffset: -30
         },
         'big': {
-            externalGraphic: "images/pin-${colour}-big.png",
+            externalGraphic: "images/pin-red-big.png", // "images/pin-${colour}-big.png"
             graphicWidth: 78,
             graphicHeight: 105,
             graphicXOffset: -39,
@@ -131,8 +131,8 @@ function fixmystreet_onload() {
         fixmystreet.bbox_strategy = new OpenLayers.Strategy.BBOX({ ratio: 1 });
         pin_layer_options.strategies = [ fixmystreet.bbox_strategy ];
         pin_layer_options.protocol = new OpenLayers.Protocol.HTTP({
-            url: CONFIG.FMS_URL + '/ajax',
-            params: fixmystreet.all_pins ? { all_pins: 1 } : { },
+            url: CONFIG.FMS_URL + '/around',
+            params: { ajax: 1, all_pins: fixmystreet.all_pins ? 1 : undefined, status: 'open' },
             format: new OpenLayers.Format.FixMyStreet()
         });
     }

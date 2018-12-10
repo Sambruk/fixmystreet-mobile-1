@@ -398,7 +398,7 @@
                         var li = '<li><a class="address" id="location_' + i + '" data-lat="' + loc.lat + '" data-long="' + loc.long + '">' + loc.address + '</a></li>';
                         multiple = multiple + li;
                     }
-                    $('#front-howto').html('<p>Multiple matches found</p><ul data-role="listview" data-inset="true">' + multiple + '</ul>');
+                    $('#front-howto').html('<p>' + FMS.strings.multiple_matches + '</p><ul data-role="listview" data-inset="true">' + multiple + '</ul>');
                     $('.ui-page').trigger('create');
                     $('#relocate').hide();
                     $('#front-howto').show();
@@ -410,9 +410,7 @@
             pauseMap: function() {
                 this.stopListening(FMS.locator);
                 FMS.locator.stopTracking();
-                if ( FMS.iPhoneModel > 3 ) {
-                    $('#map_box').addClass('background-map');
-                }
+		$('#map_box').addClass('background-map');
                 $('#map_box').off('touchend');
                 if ( fixmystreet.map ) {
                     fixmystreet.nav.deactivate();

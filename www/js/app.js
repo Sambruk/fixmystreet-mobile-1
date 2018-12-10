@@ -265,6 +265,13 @@ var tpl = {
                 cordova.plugins.Keyboard.disableScroll(true);
             }
             $('#load-screen').height( $(window).height() );
+
+            // Rough-and-ready iPhone X detection so CSS can stop things
+            // obscuring the home indicator at the bottom of the screen.
+            if (window.screen.width == 375 && window.screen.height == 812) {
+                $("body").addClass("iphone-x");
+            }
+
             FMS.initialized = 1;
             if ( navigator && navigator.splashscreen ) {
                 navigator.splashscreen.hide();
@@ -326,7 +333,14 @@ var tpl = {
                 $(document).on('ajaxStart', function() { $.mobile.loading('show'); } );
                 $(document).on('ajaxStop', function() { $.mobile.loading('hide'); } );
 
-                $('#display-help').on('vclick', function(e) { FMS.helpShow(e); } );
+                $('#display-help').on('vclick', function(e) {
+		    // Avoid Web View problem with cursor blinking
+		    // through help layer.
+		    if (device.platform === 'iOS') {
+			$('input').blur();
+		    }
+		    FMS.helpShow(e);
+		});
                 $('#dismiss').on('vclick', function(e) { FMS.helpHide(e); } );
 
                 FMS.allDrafts.comparator = function(a,b) { var a_date = a.get('created'), b_date = b.get('created'); return a_date === b_date ? 0 : a_date < b_date ? 1 : -1; };
