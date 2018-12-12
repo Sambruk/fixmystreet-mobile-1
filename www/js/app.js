@@ -334,13 +334,15 @@ var tpl = {
                 $(document).on('ajaxStop', function() { $.mobile.loading('hide'); } );
 
                 $('#display-help').on('vclick', function(e) {
-		    // Avoid Web View problem with cursor blinking
-		    // through help layer.
-		    if (device.platform === 'iOS') {
-			$('input').blur();
-		    }
-		    FMS.helpShow(e);
-		});
+                    // Avoid a problem with input cursors being visible through
+                    // the help layer on Web View, by unfocusing the element
+                    if (device.platform === 'iOS') {
+                        $('input').blur();
+                    }
+
+                    FMS.helpShow(e);
+                });
+
                 $('#dismiss').on('vclick', function(e) { FMS.helpHide(e); } );
 
                 FMS.allDrafts.comparator = function(a,b) { var a_date = a.get('created'), b_date = b.get('created'); return a_date === b_date ? 0 : a_date < b_date ? 1 : -1; };
