@@ -38,10 +38,10 @@ var CONFIG = {
 
     PINS: {
         location: {
-            image: 'images/pin-red-big.png',
-            background: 'images/pin-shadow-big.png'/*,
-            image_svg: 'images/pin-red-big.svg',
-            background_svg: 'images/pin-shadow-big.svg' */
+            image: 'images/pin@x2.png',
+            background: 'images/pin_shadow@x2.png',
+            image_svg: 'images/pin.svg',
+            background_svg: 'images/pin_shadow.svg'
         }
     }
 };
