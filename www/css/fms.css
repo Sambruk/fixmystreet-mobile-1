@@ -934,7 +934,11 @@
         top: 5px;
         right: 5px;
     }
-    
+
+    .ui-content.hidden {
+        visibility: hidden;
+    }
+
 /* iPhone X has an 'unsafe' area occupied by the home
 indicator at the bottom of screen, which we need to stop UI controls
 clashing with. */
