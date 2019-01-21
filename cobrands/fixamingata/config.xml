@@ -8,6 +8,7 @@
         Sambruk
     </author>
     <content src="index.html" />
+    <allow-intent href="mailto:*" />
     <access origin="http://127.0.0.1*" />
     <access origin="fixamingata.se" />
     <access origin="a.tile.openstreetmap.org" />
