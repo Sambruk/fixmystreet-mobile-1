@@ -44,6 +44,11 @@ var CONFIG = {
             background_svg: 'images/pin_shadow.svg'
         }
     }
+
+    // Set this to true if you want to disable the help button on the right hand
+    // side of the screen. NB you'll also need to hide #display-help and #help
+    // elements in your CSS.
+    HELP_DISABLED: false
 };
 
 // This bit is so this can be imported as a nodejs module for hook processing
