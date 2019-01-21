@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: struan@mysociety.org\n"
-"POT-Creation-Date: 2017-06-27 19:15+0200\n"
+"POT-Creation-Date: 2017-06-23 17:59+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <team@fixmystreet.com>\n"
@@ -21,7 +21,11 @@ msgstr ""
 msgid "(optional)"
 msgstr ""
 
-#: templates/existing.html:12 templates/strings.js:43
+#: templates/photo.html:20
+msgid "(required)"
+msgstr ""
+
+#: templates/existing.html:12 templates/strings.js:42
 msgid "-- Pick a category --"
 msgstr ""
 
@@ -38,10 +42,10 @@ msgid "Account"
 msgstr ""
 
 #: templates/photo.html:3
-msgid "Add Photo"
+msgid "Add Photos"
 msgstr ""
 
-#: templates/photo.html:18
+#: templates/photo.html:16
 msgid "Add a Photo"
 msgstr ""
 
@@ -49,11 +53,11 @@ msgstr ""
 msgid "Add a Photo "
 msgstr ""
 
-#: templates/offline.html:56 templates/photo.html:34
+#: templates/offline.html:56 templates/photo.html:45
 msgid "Add an existing photo"
 msgstr ""
 
-#: templates/strings.js:34
+#: templates/strings.js:33
 msgid "An error was encountered when submitting your report: "
 msgstr ""
 
@@ -89,11 +93,11 @@ msgstr ""
 msgid "Continue"
 msgstr ""
 
-#: templates/strings.js:42
+#: templates/strings.js:41
 msgid "Could not access location services. Please check permissions."
 msgstr ""
 
-#: templates/strings.js:45
+#: templates/strings.js:44
 msgid "Could not get location."
 msgstr ""
 
@@ -145,7 +149,7 @@ msgstr ""
 msgid "Go"
 msgstr ""
 
-#: templates/strings.js:44
+#: templates/strings.js:43
 msgid "Got location."
 msgstr ""
 
@@ -169,11 +173,11 @@ msgstr ""
 msgid "If you start compiling a report, but don't finish and send it, it'll appear in this menu so you can finish it later"
 msgstr ""
 
-#: templates/strings.js:47
+#: templates/strings.js:46
 msgid "Invalid email"
 msgstr ""
 
-#: templates/strings.js:48
+#: templates/strings.js:47
 msgid "Invalid report"
 msgstr ""
 
@@ -189,16 +193,12 @@ msgstr ""
 msgid "Login"
 msgstr ""
 
-#: templates/strings.js:56
+#: templates/strings.js:55
 msgid "More details"
 msgstr ""
 
 #: templates/strings.js:32
 msgid "More than one location matched that name. Select one below or try entering street name and area, or a postcode."
-msgstr ""
-
-#: templates/strings.js:33
-msgid "Multiple matches found"
 msgstr ""
 
 #: templates/submit.html:20 templates/submit.html:59
@@ -209,11 +209,11 @@ msgstr ""
 msgid "New Report Here"
 msgstr ""
 
-#: templates/details.html:4 templates/details_extra.html:4 templates/photo.html:7 templates/strings.js:23
+#: templates/details.html:4 templates/details_extra.html:4 templates/photo.html:9 templates/strings.js:23
 msgid "Next"
 msgstr ""
 
-#: templates/strings.js:55
+#: templates/strings.js:54
 msgid "No network connection available for submitting your report. Please try again later."
 msgstr ""
 
@@ -245,12 +245,12 @@ msgstr ""
 msgid "Phone number"
 msgstr ""
 
-#: templates/strings.js:50
+#: templates/strings.js:49
 msgid "Photo added"
 msgstr ""
 
-#: templates/photo.html:21
-msgid "Photo for report"
+#: templates/photo.html:25
+msgid "Photos for report"
 msgstr ""
 
 #: templates/strings.js:11
@@ -261,7 +261,7 @@ msgstr ""
 msgid "Please confirm your name, if you want it to be public and optionally your phone number."
 msgstr ""
 
-#: templates/strings.js:37
+#: templates/strings.js:36
 msgid "Please enter a location"
 msgstr ""
 
@@ -313,7 +313,7 @@ msgstr ""
 msgid "Please give us some basic details, and you're nearly done."
 msgstr ""
 
-#: templates/strings.js:40
+#: templates/strings.js:39
 msgid "Please search for a street name and area, or postcode."
 msgstr ""
 
@@ -341,7 +341,7 @@ msgstr ""
 msgid "Save"
 msgstr ""
 
-#: templates/strings.js:54
+#: templates/strings.js:53
 msgid "Save for Later"
 msgstr ""
 
@@ -393,11 +393,11 @@ msgstr ""
 msgid "Signed out!"
 msgstr ""
 
-#: templates/offline.html:4 templates/photo.html:5
+#: templates/offline.html:4 templates/photo.html:6
 msgid "Skip"
 msgstr ""
 
-#: templates/strings.js:41
+#: templates/strings.js:40
 msgid "Sorry, but we weren't able to establish your location accurately enough to show you a map. Please enter a location in the search box instead"
 msgstr ""
 
@@ -413,7 +413,7 @@ msgstr ""
 msgid "Submit"
 msgstr ""
 
-#: templates/offline.html:55 templates/photo.html:35
+#: templates/offline.html:55 templates/photo.html:46
 msgid "Take a new photo"
 msgstr ""
 
@@ -437,11 +437,11 @@ msgstr ""
 msgid "There seems to have been a problem starting the app. Please quit and try again."
 msgstr ""
 
-#: templates/strings.js:39
+#: templates/strings.js:38
 msgid "There was a problem checking if we have all the details we need. Please try again later."
 msgstr ""
 
-#: templates/strings.js:38
+#: templates/strings.js:37
 msgid "There was a problem checking we cover this location. Please try again later."
 msgstr ""
 
@@ -461,19 +461,19 @@ msgstr ""
 msgid "There was a problem looking up your location."
 msgstr ""
 
-#: templates/strings.js:35
+#: templates/strings.js:34
 msgid "There was a problem submitting your report. Please try again later."
 msgstr ""
 
-#: templates/strings.js:36
+#: templates/strings.js:35
 msgid "There was a problem submitting your report. Please try again."
 msgstr ""
 
-#: templates/strings.js:49
+#: templates/strings.js:48
 msgid "There was a problem taking your photo."
 msgstr ""
 
-#: templates/strings.js:52
+#: templates/strings.js:51
 msgid "There was a problem uploading your report."
 msgstr ""
 
@@ -501,7 +501,7 @@ msgstr ""
 msgid "To skip this step in future, you can set a password now."
 msgstr ""
 
-#: templates/offline.html:2 templates/strings.js:53
+#: templates/offline.html:2 templates/strings.js:52
 msgid "Try Again"
 msgstr ""
 
@@ -513,7 +513,7 @@ msgstr ""
 msgid "Untitled draft"
 msgstr ""
 
-#: templates/strings.js:51
+#: templates/strings.js:50
 msgid "Uploading images may take some time, please be patient"
 msgstr ""
 
@@ -577,7 +577,7 @@ msgstr ""
 msgid "e.g. ‘B2 4QA’ or ‘Tib St, Manchester’"
 msgstr ""
 
-#: templates/strings.js:46
+#: templates/strings.js:45
 msgid "required"
 msgstr ""
 
