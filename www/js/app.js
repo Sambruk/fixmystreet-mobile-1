@@ -100,6 +100,11 @@ var tpl = {
         printDebug: function(msg) {
             if ( CONFIG.DEBUG ) {
                 console.log(msg);
+
+                // Some messages get logged before we've had a chance to
+                // attach the debugger, so keep them all for later reference.
+                FMS.debug_messages = FMS.debug_messages || [];
+                FMS.debug_messages.push(msg);
             }
         },
 
@@ -351,7 +356,9 @@ var tpl = {
                 FMS.checkOnlineStatus();
                 FMS.loadCurrentDraft();
                 FMS.checkLoggedInStatus();
-                FMS.setupHelp();
+                if (!CONFIG.HELP_DISABLED) {
+                    FMS.setupHelp();
+                }
 
                 Backbone.history.start();
                 if ( navigator && navigator.splashscreen ) {
@@ -359,7 +366,9 @@ var tpl = {
                 } else {
                     $('#load-screen').hide();
                 }
-                $('#display-help').show();
+                if (!CONFIG.HELP_DISABLED) {
+                    $('#display-help').show();
+                }
             });
         }
     });
