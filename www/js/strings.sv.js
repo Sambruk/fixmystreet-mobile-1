@@ -17,7 +17,10 @@
                 required: 'Ange din e-postadress',
                 email: 'Ange en giltlig e-postadress'
             },
-            password: 'Ange ett lösenord'
+            password: {
+                required: 'Ange ett lösenord',
+                short: 'Ange ett lösenord som är minst %d tecken långt'
+            }
         },
         strings: {
             next: 'Nästa',
@@ -53,7 +56,9 @@
             try_again: 'Försök igen',
             save_for_later: 'Spara till senare',
             no_connection: 'Ingen nätverksanslutning finns tillgänglig för att skicka din rapport. Vänligen försök igen senare.',
-            more_details: 'Fler detaljer'
+            more_details: 'Fler detaljer',
+            skip: 'Hoppa över',
+            save: 'Spara'
         }
     });
 })(FMS, _);
