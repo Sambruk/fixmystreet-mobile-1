@@ -8,23 +8,23 @@ msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: struan@mysociety.org\n"
 "POT-Creation-Date: 2019-01-22 10:18+0100\n"
-"PO-Revision-Date: 2017-06-27 14:30+0200\n"
+"PO-Revision-Date: 2019-01-22 10:32+0100\n"
 "Last-Translator: FixaMinGata <info@fixamingata.se>\n"
 "Language-Team: Swedish <team@fixmystreet.com>\n"
-"Language: sv-se\n"
+"Language: sv_SE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 2.0.6\n"
 
 #: templates/photo.html:18
 msgid "(optional)"
 msgstr "(valfritt)"
 
 #: templates/photo.html:20
-#, fuzzy
 msgid "(required)"
-msgstr "nödvändigt"
+msgstr "(nödvändigt)"
 
 #: templates/existing.html:12 templates/strings.js:46
 msgid "-- Pick a category --"
@@ -43,9 +43,8 @@ msgid "Account"
 msgstr "Konto"
 
 #: templates/photo.html:3
-#, fuzzy
 msgid "Add Photos"
-msgstr "Foto"
+msgstr "Lägg till foton"
 
 #: templates/photo.html:16
 msgid "Add a Photo"
@@ -258,9 +257,8 @@ msgid "Photo added"
 msgstr "Foto tillagt"
 
 #: templates/photo.html:25
-#, fuzzy
 msgid "Photos for report"
-msgstr "Foto för rapport"
+msgstr "Foton för rapport"
 
 #: templates/strings.js:11
 msgid "Please choose a category"
@@ -283,9 +281,8 @@ msgid "Please enter a password"
 msgstr "Ange ett lösenord"
 
 #: templates/strings.js:22
-#, fuzzy
 msgid "Please enter a password at least %d characters long"
-msgstr "Ange ett lösenord"
+msgstr "Ange ett lösenord som är minst %d tecken långt"
 
 #: templates/strings.js:5
 msgid "Please enter a subject"
@@ -542,9 +539,8 @@ msgid "You are logged in as %s"
 msgstr "Du är inloggad som %s"
 
 #: templates/login.html:17
-#, fuzzy
 msgid "You are not signed in."
-msgstr "Du är inloggad som %s"
+msgstr "Du är inte inloggad."
 
 #: templates/login.html:9
 msgid "You are signed in as %s"
