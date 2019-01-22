@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: struan@mysociety.org\n"
-"POT-Creation-Date: 2017-11-25 15:38+0100\n"
+"POT-Creation-Date: 2019-01-22 10:18+0100\n"
 "PO-Revision-Date: 2017-06-27 14:30+0200\n"
 "Last-Translator: FixaMinGata <info@fixamingata.se>\n"
 "Language-Team: Swedish <team@fixmystreet.com>\n"
@@ -17,11 +17,16 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: templates/offline.html:54 templates/photo.html:18
+#: templates/photo.html:18
 msgid "(optional)"
 msgstr "(valfritt)"
 
-#: templates/existing.html:12 templates/strings.js:43
+#: templates/photo.html:20
+#, fuzzy
+msgid "(required)"
+msgstr "nödvändigt"
+
+#: templates/existing.html:12 templates/strings.js:46
 msgid "-- Pick a category --"
 msgstr "-- Välj en kategori --"
 
@@ -38,22 +43,19 @@ msgid "Account"
 msgstr "Konto"
 
 #: templates/photo.html:3
-msgid "Add Photo"
+#, fuzzy
+msgid "Add Photos"
 msgstr "Foto"
 
-#: templates/photo.html:18
+#: templates/photo.html:16
 msgid "Add a Photo"
 msgstr "Lägg till ett foto"
 
-#: templates/offline.html:54
-msgid "Add a Photo "
-msgstr "Lägg till ett foto "
-
-#: templates/offline.html:56 templates/photo.html:34
+#: templates/offline.html:52 templates/photo.html:45
 msgid "Add an existing photo"
 msgstr "Lägg till ett befintligt foto"
 
-#: templates/strings.js:34
+#: templates/strings.js:37
 msgid "An error was encountered when submitting your report: "
 msgstr "Ett fel inträffades när din rapport skickades: "
 
@@ -74,7 +76,7 @@ msgstr "Avbryt"
 msgid "Complete report now"
 msgstr "Slutför rapportering nu"
 
-#: templates/around.html:50
+#: templates/around.html:51
 msgid "Confirm Location"
 msgstr "Bekräfta läget"
 
@@ -94,11 +96,11 @@ msgstr "Bekräftelse via mejl har skickats"
 msgid "Continue"
 msgstr "Fortsätt"
 
-#: templates/strings.js:42
+#: templates/strings.js:45
 msgid "Could not access location services. Please check permissions."
 msgstr "Kunde inte använda platstjänst. Vänligen kontrollera rättigheter."
 
-#: templates/strings.js:45
+#: templates/strings.js:48
 msgid "Could not get location."
 msgstr "Position kunde inte hämtas."
 
@@ -150,7 +152,7 @@ msgstr "Mer detaljer"
 msgid "Go"
 msgstr "Sök"
 
-#: templates/strings.js:44
+#: templates/strings.js:47
 msgid "Got location."
 msgstr "Ange plats för rapportering"
 
@@ -174,11 +176,11 @@ msgstr "Jag har redan en inloggning"
 msgid "If you start compiling a report, but don't finish and send it, it'll appear in this menu so you can finish it later"
 msgstr "En påbörjad rapport, som inte avslutats, kommer att visas i den här menyn för att avslutas vid ett senare tillfälle."
 
-#: templates/strings.js:47
+#: templates/strings.js:50
 msgid "Invalid email"
 msgstr "Ogiltig e-postadress"
 
-#: templates/strings.js:48
+#: templates/strings.js:51
 msgid "Invalid report"
 msgstr "Ogiltig rapport"
 
@@ -186,23 +188,23 @@ msgstr "Ogiltig rapport"
 msgid "Locate (optional)"
 msgstr "Hitta plats (valfritt)"
 
-#: templates/strings.js:30
+#: templates/strings.js:33
 msgid "Location error"
 msgstr "Platsfel"
 
-#: templates/login.html:3 templates/login.html:30
+#: templates/login.html:26 templates/login.html:3
 msgid "Login"
 msgstr "Logga in"
 
-#: templates/strings.js:56
+#: templates/strings.js:59
 msgid "More details"
 msgstr "Fler detaljer"
 
-#: templates/strings.js:32
+#: templates/strings.js:35
 msgid "More than one location matched that name. Select one below or try entering street name and area, or a postcode."
 msgstr "Mer än en plats hittades. Välj ett av alternativen nedan eller sök på gatunamn och ort, eller postnummer."
 
-#: templates/strings.js:33
+#: templates/strings.js:36
 msgid "Multiple matches found"
 msgstr "Flera träffar hittades"
 
@@ -210,16 +212,16 @@ msgstr "Flera träffar hittades"
 msgid "Name"
 msgstr "Namn"
 
-#: templates/around.html:41
+#: templates/around.html:42
 msgid "New Report Here"
 msgstr "Ny rapportering här"
 
-#: templates/details.html:4 templates/details_extra.html:4
-#: templates/photo.html:7 templates/strings.js:23
+#: templates/details.html:4 templates/details_extra.html:7
+#: templates/offline.html:4 templates/photo.html:9 templates/strings.js:26
 msgid "Next"
 msgstr "Nästa"
 
-#: templates/strings.js:55
+#: templates/strings.js:58
 msgid "No network connection available for submitting your report. Please try again later."
 msgstr "Ingen nätverksanslutning finns tillgänglig för att skicka din rapport. Vänligen försök igen senare."
 
@@ -251,12 +253,13 @@ msgstr "Lösenord"
 msgid "Phone number"
 msgstr "Telefonnummer"
 
-#: templates/strings.js:50
+#: templates/strings.js:53
 msgid "Photo added"
 msgstr "Foto tillagt"
 
-#: templates/photo.html:21
-msgid "Photo for report"
+#: templates/photo.html:25
+#, fuzzy
+msgid "Photos for report"
 msgstr "Foto för rapport"
 
 #: templates/strings.js:11
@@ -267,7 +270,7 @@ msgstr "Sparad i %s-kategorin"
 msgid "Please confirm your name, if you want it to be public and optionally your phone number."
 msgstr "Bekräfta ditt namn och eventuellt också ditt telefonnummer, och om du vill att ditt namn skall vara offentligt."
 
-#: templates/strings.js:37
+#: templates/strings.js:40
 msgid "Please enter a location"
 msgstr "Ange en plats"
 
@@ -275,8 +278,13 @@ msgstr "Ange en plats"
 msgid "Please enter a message"
 msgstr "Fyll i detaljer kring problemet"
 
-#: templates/strings.js:20
+#: templates/strings.js:21
 msgid "Please enter a password"
+msgstr "Ange ett lösenord"
+
+#: templates/strings.js:22
+#, fuzzy
+msgid "Please enter a password at least %d characters long"
 msgstr "Ange ett lösenord"
 
 #: templates/strings.js:5
@@ -320,17 +328,13 @@ msgstr "Fyll i detaljer kring problemet"
 msgid "Please give us some basic details, and you're nearly done."
 msgstr "Ge oss grundläggande information för att skapa ett ärende."
 
-#: templates/strings.js:40
+#: templates/strings.js:43
 msgid "Please search for a street name and area, or postcode."
 msgstr "Sök efter ett postnummer eller gatunamn och ort."
 
 #: templates/details.html:10 templates/offline.html:41
 msgid "Provide a title"
 msgstr "Ange en titel"
-
-#: templates/offline.html:68
-msgid "Remove Photo"
-msgstr "Radera foto"
 
 #: templates/submit.html:33 templates/submit.html:51 templates/submit.html:77
 #: templates/submit_confirm.html:38 templates/submit_password.html:16
@@ -341,15 +345,15 @@ msgstr "Rapportera"
 msgid "Report Created"
 msgstr "Rapporten är skapad"
 
-#: templates/around.html:47
+#: templates/around.html:48
 msgid "Reposition Report Here"
 msgstr "Omplacera rapporten hit"
 
-#: templates/submit.html:88
+#: templates/strings.js:61 templates/submit.html:88
 msgid "Save"
 msgstr "Spara"
 
-#: templates/strings.js:54
+#: templates/strings.js:57
 msgid "Save for Later"
 msgstr "Spara till senare"
 
@@ -369,7 +373,7 @@ msgstr "Sparad i %s-kategorin"
 msgid "Search"
 msgstr "Sök"
 
-#: templates/strings.js:29
+#: templates/strings.js:32
 msgid "Search for a place or postcode"
 msgstr "Sök efter en plats eller postnummer"
 
@@ -381,7 +385,7 @@ msgstr "Sök eller navigera via kartan"
 msgid "Send confirmation email"
 msgstr "Skicka bekräftelsemejl"
 
-#: templates/around.html:44
+#: templates/around.html:45
 msgid "Set Report Location"
 msgstr "Ange plats för rapportering"
 
@@ -391,23 +395,15 @@ msgstr "Ange plats för rapportering"
 msgid "Show my name publicly"
 msgstr "Visa mitt namn offentligt"
 
-#: templates/login.html:12 templates/login.html:40
+#: templates/login.html:12
 msgid "Sign Out"
 msgstr "Logga ut"
 
-#: templates/login.html:36
-msgid "Signed in!"
-msgstr "Inloggad!"
-
-#: templates/login.html:17
-msgid "Signed out!"
-msgstr "Utloggad!"
-
-#: templates/offline.html:4 templates/photo.html:5
+#: templates/offline.html:4 templates/photo.html:6 templates/strings.js:60
 msgid "Skip"
 msgstr "Hoppa över"
 
-#: templates/strings.js:41
+#: templates/strings.js:44
 msgid "Sorry, but we weren't able to establish your location accurately enough to show you a map. Please enter a location in the search box instead"
 msgstr "Tyvärr kunde positionen för din placering inte hittas. Vänligen ange en plats i sökrutan istället"
 
@@ -419,11 +415,11 @@ msgstr "Skapa en ny rapport"
 msgid "Subject"
 msgstr "Ämne"
 
-#: templates/submit.html:3
+#: templates/details_extra.html:5 templates/submit.html:3
 msgid "Submit"
 msgstr "Skicka"
 
-#: templates/offline.html:55 templates/photo.html:35
+#: templates/offline.html:51 templates/photo.html:46
 msgid "Take a new photo"
 msgstr "Ta ett nytt foto"
 
@@ -447,47 +443,47 @@ msgstr "Du är inte ansluten till Internet, vill du spara rapporten för att ski
 msgid "There seems to have been a problem starting the app. Please quit and try again."
 msgstr "Det har uppstått ett problem. Vänligen avsluta appen och försök igen."
 
-#: templates/strings.js:39
+#: templates/strings.js:42
 msgid "There was a problem checking if we have all the details we need. Please try again later."
 msgstr "Ett problem uppstod i samband med genomgång av de detaljer som behövs för rapporteringen. Vänligen försök igen senare."
 
-#: templates/strings.js:38
+#: templates/strings.js:41
 msgid "There was a problem checking we cover this location. Please try again later."
 msgstr "Ett problem uppstod i samband med genomgång av att angiven position stödjs. Vänligen försök igen senare."
 
-#: templates/strings.js:27
+#: templates/strings.js:30
 msgid "There was a problem logging you in. Please check your email and password and that you have confirmed your password."
 msgstr "Ett problem uppstod vid din inloggning. Vänligen försök igen senare."
 
-#: templates/strings.js:25
+#: templates/strings.js:28
 msgid "There was a problem logging you in. Please try again later."
 msgstr "Det har uppstått ett problem. Vänligen avsluta appen och försök igen."
 
-#: templates/strings.js:26
+#: templates/strings.js:29
 msgid "There was a problem logging you out. Please try again later."
 msgstr "Det har uppstått ett problem. Vänligen avsluta appen och försök igen."
 
-#: templates/strings.js:31
+#: templates/strings.js:34
 msgid "There was a problem looking up your location."
 msgstr "Ett problem uppstod i vid fastställande av plats."
 
-#: templates/strings.js:35
+#: templates/strings.js:38
 msgid "There was a problem submitting your report. Please try again later."
 msgstr "Det har uppstått ett problem. Vänligen avsluta appen och försök igen."
 
-#: templates/strings.js:36
+#: templates/strings.js:39
 msgid "There was a problem submitting your report. Please try again."
 msgstr "Det har uppstått ett problem. Vänligen avsluta appen och försök igen."
 
-#: templates/strings.js:49
+#: templates/strings.js:52
 msgid "There was a problem taking your photo."
 msgstr "Ett problem uppstod då fotot togs."
 
-#: templates/strings.js:52
+#: templates/strings.js:55
 msgid "There was a problem uploading your report."
 msgstr "Ett problem uppstod då rapporten laddades upp."
 
-#: templates/strings.js:28
+#: templates/strings.js:31
 msgid "There was a problem with your email/password combination. If you have forgotten your password, or do not have one, you can set one by returning to the email screen and selecting the set password option. Passwords are not activated until the link in the confirmation email is clicked."
 msgstr "Det finns ett problem med din e-post/lösenords-kombination. Om du har glömt ditt lösenord, eller inte har ett, kan ett nytt anges genom att gå via e-postfönstret och välja alternativet lösenord. Lösenord aktiveras när du klickar på länken i ditt bekräftelsemejl."
 
@@ -513,7 +509,7 @@ msgstr "Titel"
 msgid "To skip this step in future, you can set a password now."
 msgstr "Ange ett lösenord för att slippa detta steg i framtiden."
 
-#: templates/offline.html:2 templates/strings.js:53
+#: templates/offline.html:2 templates/strings.js:56
 msgid "Try Again"
 msgstr "Försök igen"
 
@@ -521,11 +517,11 @@ msgstr "Försök igen"
 msgid "Unsent Report"
 msgstr "Oskickad rapport"
 
-#: templates/strings.js:24
+#: templates/strings.js:27
 msgid "Untitled draft"
 msgstr "Namnlöst utkast"
 
-#: templates/strings.js:51
+#: templates/strings.js:54
 msgid "Uploading images may take some time, please be patient"
 msgstr "Uppladdning av bilder kan ta en stund, vänligen vänta"
 
@@ -545,6 +541,11 @@ msgstr "Ja, jag har ett lösenord"
 msgid "You are logged in as %s"
 msgstr "Du är inloggad som %s"
 
+#: templates/login.html:17
+#, fuzzy
+msgid "You are not signed in."
+msgstr "Du är inloggad som %s"
+
 #: templates/login.html:9
 msgid "You are signed in as %s"
 msgstr "Du är inloggad som %s"
@@ -553,13 +554,9 @@ msgstr "Du är inloggad som %s"
 msgid "You are signed in as <span id=\"username\">%s</span>"
 msgstr "Du är inloggad som <span id=\"username\">%s</span>"
 
-#: templates/login.html:24
+#: templates/login.html:20
 msgid "Your Email"
 msgstr "Din e-postadress"
-
-#: templates/offline.html:64
-msgid "Your Photo"
-msgstr "Ditt foto"
 
 #: templates/submit_confirm.html:3 templates/submit_email.html:3
 #: templates/submit_name.html:3 templates/submit_password.html:3
@@ -575,7 +572,7 @@ msgstr "Din e-postadress"
 msgid "Your name"
 msgstr "Ditt namn"
 
-#: templates/login.html:27 templates/submit.html:50
+#: templates/login.html:23 templates/submit.html:50
 #: templates/submit_password.html:12 templates/submit_set_password.html:15
 msgid "Your password"
 msgstr "Ditt lösenord"
@@ -592,10 +589,25 @@ msgstr "radera"
 msgid "e.g. ‘B2 4QA’ or ‘Tib St, Manchester’"
 msgstr "ex.v. ‘107 25’ eller ‘Vasagatan, Stockholm’"
 
-#: templates/strings.js:46
+#: templates/strings.js:49
 msgid "required"
 msgstr "nödvändigt"
 
 #: templates/save_offline.html:12
 msgid "save"
 msgstr "spara"
+
+#~ msgid "Add a Photo "
+#~ msgstr "Lägg till ett foto "
+
+#~ msgid "Remove Photo"
+#~ msgstr "Radera foto"
+
+#~ msgid "Signed in!"
+#~ msgstr "Inloggad!"
+
+#~ msgid "Signed out!"
+#~ msgstr "Utloggad!"
+
+#~ msgid "Your Photo"
+#~ msgstr "Ditt foto"
