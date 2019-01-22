@@ -1,6 +1,6 @@
 ## Releases
 
-* Unreleased
+* v2.1 (3rd May 2018)
     - New features
         - Multiple photo support. #107
         - iPhone X support. #259
@@ -15,3 +15,4 @@
         - CONFIG.SKIP_CONFIRM_REPORT flag to skip confirmation screen.
         - Ensure compatibility with latest Cordova versions.
         - CONFIG.PASSWORD_MIN_LENGTH key to validate user password.
+        - CONFIG.PASSWORD_CHECK_COMMON flag to test password against server.
