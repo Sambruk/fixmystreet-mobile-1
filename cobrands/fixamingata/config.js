@@ -38,10 +38,10 @@ var CONFIG = {
 
     PINS: {
         location: {
-            image: 'images/pin@x2.png',
-            background: 'images/pin_shadow@x2.png',
-            image_svg: 'images/pin.svg',
-            background_svg: 'images/pin_shadow.svg'
+            image: 'cobrands/fixamingata/images/fmg-pin.png',
+            background: 'cobrands/fixamingata/images/fmg-pin_shadow.png',
+            image_svg: 'cobrands/fixamingata/images/fmg-pin.svg',
+            background_svg: 'cobrands/fixamingata/images/fmg-pin_shadow.svg'
         }
     },
 
