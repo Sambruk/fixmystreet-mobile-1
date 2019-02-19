@@ -1,0 +1,276 @@
+@import "compass";
+
+$gc_orange: rgb(245, 130, 32);
+$gc_dark_green: rgb(80, 184, 72);
+$gc_light_green: rgb(178, 210, 53);
+
+$text-color: #222;
+
+.ios .ui-bar-a,
+body.ios, .ui-bar-a {
+    background: white;
+}
+
+.ios .ui-bar-a, .ui-bar-a {
+    border-color: white;
+    color: $text-color;
+}
+
+#load-screen,
+#locating {
+    background: white;
+    color: $text-color;
+}
+
+#locating #progress-bar {
+    background-color: #FFFF99;
+}
+
+#view-my-reports .draft_count {
+    background-color: rgb(186,21,28);
+    color: #fff;
+    border-color: #ffea3d;
+}
+
+#display-help, #help {
+    display: none;
+}
+
+
+.ui-btn-up-a, .ui-btn-hover-a, .ui-btn-down-a {
+    color: $text-color;
+    border-color: darken($gc_orange, 15%);
+    background: lighten($gc_orange, 5%);
+}
+
+.ui-corner-all,
+.ui-btn-corner-all {
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+
+#around-page .ui-header, #login .ui-header {
+    // We want the logo in the header instead of plain text
+    .ui-title {
+        text-indent: -99999px;
+        margin: 0;
+        padding-top: 0.6em;
+        padding-bottom: 0.6em;
+        background-image: url('../images/gc-logo.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+    }
+}
+
+#login .ui-header.loggedout {
+    visibility: hidden;
+    display: none;
+}
+
+
+#login .ui-content img {
+    max-width: 100%;
+}
+
+#load-screen .radar,
+#locating .radar {
+    background-image: url('../images/gc-logo-big.jpg');
+    background-size: contain;
+}
+
+#dismiss {
+    color: white;
+    text-shadow: 0px 1px 0px silver;
+}
+
+
+#locating p {
+    text-shadow: none;
+}
+
+#details-extra-page div[data-role="content"] {
+    padding: 1em 0;
+
+    label {
+        font-weight: bold;
+    }
+
+    h2 {
+        margin :0;
+    }
+}
+
+.pothole-size-selector {
+    &.hidden {
+        display: none;
+    }
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(64,64,64,0.9);
+    z-index: 100;
+    margin: 0;
+    padding: 0;
+    padding-bottom: constant(safe-area-inset-bottom);
+    padding-bottom: env(safe-area-inset-bottom);
+
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+
+    h2 {
+        text-align: center;
+        color: white;
+        text-shadow: none;
+        padding: 0;
+        margin: 0.75em 0;
+    }
+
+    .photo {
+        // Give wide photos breathing room on narrow screens
+        width: 92%;
+
+        // No need for a big picture if the user just took it and is
+        // still standing over the pothole.
+        height: 100px;
+        flex: initial;
+        -webkit-box-flex: initial;
+    }
+
+    table {
+        padding: 0;
+        margin: 0 0 1.5em 0;
+        width: 75%;
+        min-width: 300px;
+
+        td {
+            padding: 0 0.25em;
+            width: 50%;
+        }
+    }
+
+    .photo-pothole-size {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding-bottom: 3em;
+
+        .pothole-row {
+            flex: 1;
+            display: flex;
+
+            .pothole-cell {
+                flex: 1;
+                position: relative;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center center;
+                background-origin: content-box;
+                padding-bottom: 1.5em;
+                margin: 3px;
+
+                &.pothole-background-tiny {
+                    background-image: url('../images/tiny.jpg');
+                }
+                &.pothole-background-small {
+                    background-image: url('../images/small.jpg');
+                }
+                &.pothole-background-medium {
+                    background-image: url('../images/medium.jpg');
+                }
+                &.pothole-background-large {
+                    background-image: url('../images/large.jpg');
+                }
+                &.pothole-background-crater {
+                    background-image: url('../images/crater.jpg');
+                }
+                &.pothole-background-not-pothole {
+                    display: flex;
+                    align-items: center;
+                    padding-bottom: 0;
+                    background-color: black;
+
+                    span {
+                        flex: 1;
+                        font-size: 2em;
+                        line-height: 1em;
+                        position: relative;
+                    }
+                }
+
+                span {
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    text-align: center;
+                    text-shadow: none;
+                    color: white;
+                    background-color: black;
+                    font-size: 0.8em;
+                    font-weight: bold;
+                    line-height: 1em;
+                }
+                @media (max-width: 320px) {
+                    span {
+                        font-size: 0.6em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.blurred {
+    -webkit-filter: blur(6px);
+            filter: blur(6px);
+}
+
+.photo {
+    .pothole-size-wrapper {
+        position: absolute;
+        top: 3px;
+        left: 0px;
+        right: 0px;
+        padding: 0.5em 0;
+
+        .pothole-size {
+            background-color: rgba(255,255,255,0.85);
+            padding: 0.5em;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+    }
+
+}
+
+.gmailstyletest input,
+.gmailstyletest input[type="password"],
+.gmailstyletest input[type="search"],
+.gmailstyletest input[type="email"],
+.gmailstyletest textarea,
+.gmailstyletest select,
+.gmailstyletest input[type="range"] {
+    font-size: 1.2em;
+}
+
+@media (max-width: 320px) {
+    .gmailstyletest input,
+    .gmailstyletest input[type="password"],
+    .gmailstyletest input[type="search"],
+    .gmailstyletest input[type="email"],
+    .gmailstyletest textarea,
+    .gmailstyletest select,
+    .gmailstyletest input[type="range"] {
+        font-size: 1em;
+    }
+}

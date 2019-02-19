@@ -1,0 +1,16 @@
+<div id="report-created-header" data-role="header">
+    <a class="ui-btn-left">Home</a>
+    <h1>Report Created</h1>
+</div>
+<div data-role="content">
+
+    <% if (FMS.createdReport.get("quote_confirmation_message")) { %>
+        <%= FMS.createdReport.get("quote_confirmation_message") %>
+    <% } else { %>
+        <h3>Thanks. Your report will be sent immediately.</h3>
+    <% } %>
+
+    <div class="bottom-btn">
+        <input type="button" id="id_report_another" data-theme="a" value="Start new report" >
+    </div>
+</div>

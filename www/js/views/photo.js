@@ -12,8 +12,8 @@
                 'pageshow': 'afterDisplay',
                 'vclick .ui-btn-left': 'onClickButtonPrev',
                 'vclick .ui-btn-right': 'onClickButtonNext',
-                'vclick #id_photo_button': 'takePhoto',
-                'vclick #id_existing': 'addPhoto',
+                'vclick #id_photo_button': 'takeNewPhoto',
+                'vclick #id_existing': 'addPhotoFromLibrary',
                 'vclick .del_photo_button': 'deletePhoto'
             },
 
@@ -33,7 +33,33 @@
                 $(".photo-wrapper").height(wrapperHeight);
             },
 
-            getOptions: function(isFromAlbum) {
+            takeNewPhoto: function(e) {
+                e.preventDefault();
+                this.getPhoto(false);
+            },
+
+            addPhotoFromLibrary: function(e) {
+                e.preventDefault();
+                this.getPhoto(true);
+            },
+
+            getPhoto: function(isFromAlbum) {
+                $.mobile.loading('show');
+                $('.photo-wrapper .photo img').hide();
+                var that = this;
+                var options = this.getCameraOptions(isFromAlbum);
+                navigator.camera.getPicture(
+                    function(imgURI) {
+                        that.getPhotoSuccess(imgURI);
+                    },
+                    function(error) {
+                        that.getPhotoFail(error);
+                    },
+                    options
+                );
+            },
+
+            getCameraOptions: function(isFromAlbum) {
                 var options = {
                     destinationType: Camera.DestinationType.FILE_URI,
                     sourceType: navigator.camera.PictureSourceType.PHOTOLIBRARY,
@@ -55,27 +81,7 @@
                 return options;
             },
 
-            takePhoto: function(e) {
-                e.preventDefault();
-                $.mobile.loading('show');
-                $('.photo-wrapper .photo img').hide();
-                var that = this;
-
-                var options = this.getOptions();
-
-                navigator.camera.getPicture( function(imgURI) { that.addPhotoSuccess(imgURI); }, function(error) { that.addPhotoFail(error); }, options);
-            },
-
-            addPhoto: function(e) {
-                e.preventDefault();
-                $.mobile.loading('show');
-                $('.photo-wrapper .photo img').hide();
-                var that = this;
-                var options = this.getOptions(true);
-                navigator.camera.getPicture( function(imgURI) { that.addPhotoSuccess(imgURI); }, function(error) { that.addPhotoFail(error); }, options);
-            },
-
-            addPhotoSuccess: function(imgURI) {
+            getPhotoSuccess: function(imgURI) {
                 var move;
                 // on iOS the photos go into a temp folder in the apps own filespace so we
                 // can move them, and indeed have to as the tmp space is cleaned out by the OS
@@ -91,25 +97,44 @@
                 }
 
                 var that = this;
-                move.done( function( file ) {
-                    var files = that.model.get('files');
-                    files.push(file.toURL());
-                    that.model.set('files', files);
-                    FMS.saveCurrentDraft();
-                    $.mobile.loading('hide');
-                    that.rerender();
-                });
-
-                move.fail( function() { that.addPhotoFail(); } );
+                move.done( function( file ) { that.addPhotoToReport(file); });
+                move.fail( function() { that.getPhotoFail("File move failed."); } );
             },
 
-            addPhotoFail: function(message) {
+            addPhotoToReport: function(file) {
+                var files = this.model.get('files');
+                files.push(file.toURL());
+                this.model.set('files', files);
+                FMS.saveCurrentDraft();
+                $.mobile.loading('hide');
+                this.rerender();
+            },
+
+            getPhotoFail: function(message) {
                 $('.photo-wrapper .photo img').show();
                 $.mobile.loading('hide');
-                if ( message != 'no image selected' &&
-                    message != 'Selection cancelled.' &&
-                    message != 'Camera cancelled.' ) {
+
+                // Rewrite errors from photo capture failure to be more friendly
+                // (and localised). Map a message to null if it shouldn't
+                // generate a dialog to the user.
+                // Missing messages from this map will default to
+                // FMS.strings.photo_failed.
+                var friendly_messages = {
+                    'no image selected': null,
+                    'No Image Selected': null,
+                    'Selection cancelled.': null,
+                    'Camera cancelled.': null,
+                    'has no access to camera': FMS.strings.camera_access_denied,
+                    // Sadly the cordova-plugin-camera plugin returns this
+                    // string on iOS if the user dismisses the photo picker,
+                    // so we can't present a more helpful 'please allow access'
+                    // message.
+                    'has no access to assets': null
+                };
+                if (typeof friendly_messages[message] === 'undefined') {
                     this.displayAlert(FMS.strings.photo_failed);
+                } else if (friendly_messages[message]) {
+                    this.displayAlert(friendly_messages[message]);
                 }
             },
 
