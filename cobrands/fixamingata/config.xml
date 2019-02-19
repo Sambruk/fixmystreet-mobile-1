@@ -105,6 +105,7 @@
         <variable name="IOS_LOCALIZATION" value="Swedish" />
     </plugin>
     <plugin name="cordova-plugin-media" spec="^5.0.2">
+        <variable name="KEEP_AVAUDIOSESSION_ALWAYS_ACTIVE" value="NO" />      
         <variable name="IOS_LOCALIZATION" value="Swedish" />
     </plugin>
     <plugin name="cordova-plugin-media-capture" spec="^3.0.1">
