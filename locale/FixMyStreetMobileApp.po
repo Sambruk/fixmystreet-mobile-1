@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: struan@mysociety.org\n"
-"POT-Creation-Date: 2019-01-22 10:18+0100\n"
+"POT-Creation-Date: 2019-02-20 08:38+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <team@fixmystreet.com>\n"
@@ -189,7 +189,7 @@ msgstr ""
 msgid "Login"
 msgstr ""
 
-#: templates/strings.js:59
+#: templates/strings.js:61
 msgid "More details"
 msgstr ""
 
@@ -213,7 +213,7 @@ msgstr ""
 msgid "Next"
 msgstr ""
 
-#: templates/strings.js:58
+#: templates/strings.js:60
 msgid "No network connection available for submitting your report. Please try again later."
 msgstr ""
 
@@ -251,6 +251,14 @@ msgstr ""
 
 #: templates/photo.html:25
 msgid "Photos for report"
+msgstr ""
+
+#: templates/strings.js:55
+msgid "Please allow access to photos in your phone’s settings."
+msgstr ""
+
+#: templates/strings.js:54
+msgid "Please allow access to the camera in your phone’s settings."
 msgstr ""
 
 #: templates/strings.js:11
@@ -337,11 +345,11 @@ msgstr ""
 msgid "Reposition Report Here"
 msgstr ""
 
-#: templates/strings.js:61 templates/submit.html:88
+#: templates/strings.js:63 templates/submit.html:88
 msgid "Save"
 msgstr ""
 
-#: templates/strings.js:57
+#: templates/strings.js:59
 msgid "Save for Later"
 msgstr ""
 
@@ -385,7 +393,7 @@ msgstr ""
 msgid "Sign Out"
 msgstr ""
 
-#: templates/offline.html:4 templates/photo.html:6 templates/strings.js:60
+#: templates/offline.html:4 templates/photo.html:6 templates/strings.js:62
 msgid "Skip"
 msgstr ""
 
@@ -465,7 +473,7 @@ msgstr ""
 msgid "There was a problem taking your photo."
 msgstr ""
 
-#: templates/strings.js:55
+#: templates/strings.js:57
 msgid "There was a problem uploading your report."
 msgstr ""
 
@@ -493,7 +501,7 @@ msgstr ""
 msgid "To skip this step in future, you can set a password now."
 msgstr ""
 
-#: templates/offline.html:2 templates/strings.js:56
+#: templates/offline.html:2 templates/strings.js:58
 msgid "Try Again"
 msgstr ""
 
@@ -505,7 +513,7 @@ msgstr ""
 msgid "Untitled draft"
 msgstr ""
 
-#: templates/strings.js:54
+#: templates/strings.js:56
 msgid "Uploading images may take some time, please be patient"
 msgstr ""
 

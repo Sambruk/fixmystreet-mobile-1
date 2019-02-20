@@ -51,6 +51,8 @@
             invalid_report: 'Ogiltig rapport',
             photo_failed: 'Ett problem uppstod då fotot togs.',
             photo_added: 'Foto tillagt',
+            camera_access_denied: 'Vänligen tillåt tillgång till kameran i appens rättigheter.',
+            photo_access_denied: 'Vänligen tillåt tillgång till foton i appens rättigheter.',
             photo_loading: 'Uppladdning av bilder kan ta en stund, vänligen vänta',
             upload_aborted: 'Ett problem uppstod då rapporten laddades upp.',
             try_again: 'Försök igen',

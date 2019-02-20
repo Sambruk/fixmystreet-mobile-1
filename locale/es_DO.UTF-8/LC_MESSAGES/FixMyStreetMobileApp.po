@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: my-society\n"
 "Report-Msgid-Bugs-To: struan@mysociety.org\n"
-"POT-Creation-Date: 2019-01-22 10:18+0100\n"
+"POT-Creation-Date: 2019-02-20 08:38+0100\n"
 "PO-Revision-Date: 2017-06-26 15:22+0100\n"
 "Last-Translator: applingua <team@applingua.com>\n"
 "Language-Team: Spanish, Dominican Republic\n"
@@ -200,7 +200,7 @@ msgstr "Error de ubicación"
 msgid "Login"
 msgstr "Abrir sesión"
 
-#: templates/strings.js:59
+#: templates/strings.js:61
 msgid "More details"
 msgstr "Más detalles"
 
@@ -225,7 +225,7 @@ msgstr "Nuevo informe aquí"
 msgid "Next"
 msgstr "Siguiente"
 
-#: templates/strings.js:58
+#: templates/strings.js:60
 msgid "No network connection available for submitting your report. Please try again later."
 msgstr "No hay conexión a la red disponible para enviar su informe. Por favor, inténtelo de nuevo más tarde."
 
@@ -265,6 +265,14 @@ msgstr "Foto añadida"
 #, fuzzy
 msgid "Photos for report"
 msgstr "Foto para el informe"
+
+#: templates/strings.js:55
+msgid "Please allow access to photos in your phone’s settings."
+msgstr ""
+
+#: templates/strings.js:54
+msgid "Please allow access to the camera in your phone’s settings."
+msgstr ""
 
 #: templates/strings.js:11
 msgid "Please choose a category"
@@ -353,11 +361,11 @@ msgstr "Informe creado"
 msgid "Reposition Report Here"
 msgstr "Reposicione el informe aquí"
 
-#: templates/strings.js:61 templates/submit.html:88
+#: templates/strings.js:63 templates/submit.html:88
 msgid "Save"
 msgstr "Guardar"
 
-#: templates/strings.js:57
+#: templates/strings.js:59
 msgid "Save for Later"
 msgstr "Guardar para más tarde"
 
@@ -403,7 +411,7 @@ msgstr "Mostrar mi nombre públicamente"
 msgid "Sign Out"
 msgstr "Cerrar sesión"
 
-#: templates/offline.html:4 templates/photo.html:6 templates/strings.js:60
+#: templates/offline.html:4 templates/photo.html:6 templates/strings.js:62
 msgid "Skip"
 msgstr "Saltar"
 
@@ -483,7 +491,7 @@ msgstr "Hubo un problema al enviar su informe. Por favor, inténtelo de nuevo m�
 msgid "There was a problem taking your photo."
 msgstr "Hubo un problema al tomar su foto."
 
-#: templates/strings.js:55
+#: templates/strings.js:57
 msgid "There was a problem uploading your report."
 msgstr "Hubo un problema al subir su informe."
 
@@ -513,7 +521,7 @@ msgstr "Título"
 msgid "To skip this step in future, you can set a password now."
 msgstr "Para saltar este paso en el futuro, puede configurar una contraseña ahora."
 
-#: templates/offline.html:2 templates/strings.js:56
+#: templates/offline.html:2 templates/strings.js:58
 msgid "Try Again"
 msgstr "Inténtelo nuevamente"
 
@@ -525,7 +533,7 @@ msgstr "Informe no enviado"
 msgid "Untitled draft"
 msgstr "Borrador sin título"
 
-#: templates/strings.js:54
+#: templates/strings.js:56
 msgid "Uploading images may take some time, please be patient"
 msgstr "Subir imágenes podría demorar, por favor tenga paciencia"
 

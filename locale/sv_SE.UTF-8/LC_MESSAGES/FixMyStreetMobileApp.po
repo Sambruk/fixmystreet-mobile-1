@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: struan@mysociety.org\n"
-"POT-Creation-Date: 2019-01-22 10:18+0100\n"
-"PO-Revision-Date: 2019-01-22 10:32+0100\n"
+"POT-Creation-Date: 2019-02-20 08:38+0100\n"
+"PO-Revision-Date: 2019-02-20 08:46+0100\n"
 "Last-Translator: FixaMinGata <info@fixamingata.se>\n"
 "Language-Team: Swedish <team@fixmystreet.com>\n"
 "Language: sv_SE\n"
@@ -195,7 +195,7 @@ msgstr "Platsfel"
 msgid "Login"
 msgstr "Logga in"
 
-#: templates/strings.js:59
+#: templates/strings.js:61
 msgid "More details"
 msgstr "Fler detaljer"
 
@@ -220,7 +220,7 @@ msgstr "Ny rapportering här"
 msgid "Next"
 msgstr "Nästa"
 
-#: templates/strings.js:58
+#: templates/strings.js:60
 msgid "No network connection available for submitting your report. Please try again later."
 msgstr "Ingen nätverksanslutning finns tillgänglig för att skicka din rapport. Vänligen försök igen senare."
 
@@ -259,6 +259,14 @@ msgstr "Foto tillagt"
 #: templates/photo.html:25
 msgid "Photos for report"
 msgstr "Foton för rapport"
+
+#: templates/strings.js:55
+msgid "Please allow access to photos in your phone’s settings."
+msgstr "Vänligen tillåt tillgång till foton i appens rättigheter."
+
+#: templates/strings.js:54
+msgid "Please allow access to the camera in your phone’s settings."
+msgstr "Vänligen tillåt tillgång till kameran i appens rättigheter."
 
 #: templates/strings.js:11
 msgid "Please choose a category"
@@ -346,11 +354,11 @@ msgstr "Rapporten är skapad"
 msgid "Reposition Report Here"
 msgstr "Omplacera rapporten hit"
 
-#: templates/strings.js:61 templates/submit.html:88
+#: templates/strings.js:63 templates/submit.html:88
 msgid "Save"
 msgstr "Spara"
 
-#: templates/strings.js:57
+#: templates/strings.js:59
 msgid "Save for Later"
 msgstr "Spara till senare"
 
@@ -396,7 +404,7 @@ msgstr "Visa mitt namn offentligt"
 msgid "Sign Out"
 msgstr "Logga ut"
 
-#: templates/offline.html:4 templates/photo.html:6 templates/strings.js:60
+#: templates/offline.html:4 templates/photo.html:6 templates/strings.js:62
 msgid "Skip"
 msgstr "Hoppa över"
 
@@ -476,7 +484,7 @@ msgstr "Det har uppstått ett problem. Vänligen avsluta appen och försök igen
 msgid "There was a problem taking your photo."
 msgstr "Ett problem uppstod då fotot togs."
 
-#: templates/strings.js:55
+#: templates/strings.js:57
 msgid "There was a problem uploading your report."
 msgstr "Ett problem uppstod då rapporten laddades upp."
 
@@ -506,7 +514,7 @@ msgstr "Titel"
 msgid "To skip this step in future, you can set a password now."
 msgstr "Ange ett lösenord för att slippa detta steg i framtiden."
 
-#: templates/offline.html:2 templates/strings.js:56
+#: templates/offline.html:2 templates/strings.js:58
 msgid "Try Again"
 msgstr "Försök igen"
 
@@ -518,7 +526,7 @@ msgstr "Oskickad rapport"
 msgid "Untitled draft"
 msgstr "Namnlöst utkast"
 
-#: templates/strings.js:54
+#: templates/strings.js:56
 msgid "Uploading images may take some time, please be patient"
 msgstr "Uppladdning av bilder kan ta en stund, vänligen vänta"
 
